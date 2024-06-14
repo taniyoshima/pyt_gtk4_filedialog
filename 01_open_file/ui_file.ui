@@ -5,6 +5,9 @@
   <requires lib="gio" version="2.44"/>
   <requires lib="gtk" version="4.12"/>
   <template class="window" parent="GtkApplicationWindow">
+    <property name="default-height">60</property>
+    <property name="default-width">400</property>
+    <property name="title">pyt_gtk4_filedialog</property>
     <child>
       <object class="GtkButton">
         <property name="label">Gtk.Filedialogの呼び出し</property>

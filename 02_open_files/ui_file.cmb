@@ -14,6 +14,9 @@
 	(1,7,"GtkFileFilter","filter3",4,None,None,None,2,None,None)
   </object>
   <object_property>
+	(1,1,"GtkWindow","default-height","60",None,None,None,None,None,None,None,None,None),
+	(1,1,"GtkWindow","default-width","400",None,None,None,None,None,None,None,None,None),
+	(1,1,"GtkWindow","title","pyt_gtk4_filedialog2",None,None,None,None,None,None,None,None,None),
 	(1,2,"GtkButton","label","Gtk.Filedialogの呼び出し",None,None,None,None,None,None,None,None,None),
 	(1,2,"GtkWidget","margin-bottom","20",None,None,None,None,None,None,None,None,None),
 	(1,2,"GtkWidget","margin-end","20",None,None,None,None,None,None,None,None,None),

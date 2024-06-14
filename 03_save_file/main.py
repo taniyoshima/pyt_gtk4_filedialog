@@ -22,21 +22,21 @@ class Gtk4TestTest(Gtk.ApplicationWindow):
     @Gtk.Template.Callback()
     def on_button_clicked(self, button):
 
-        self.filedialog.open_multiple(
+        self.filedialog.save(
             parent=self, cancellable=None,
-            callback=self.on_filedialog_open)
+            callback=self.on_filedialog_save)
 
-    def on_filedialog_open(self, filedialog, task):
+    def on_filedialog_save(self, filedialog, task):
         try:
-            files = filedialog.open_multiple_finish(task)
+            file = filedialog.save_finish(task)
         except GLib.GError:
             return
 
-        if files is not None:
-            for file in files:
-                print(file.get_path())
-                print(file.get_parent().get_path())
-                print(file.get_basename())
+        if file is not None:
+            # ファイルの保存作業を記入
+            print(file.get_path())
+            print(file.get_parent().get_path())
+            print(file.get_basename())
 
 
 class Gtk4TestApp(Gtk.Application):
