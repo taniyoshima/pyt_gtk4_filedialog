@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.90.2 -->
+<interface>
+  <!-- interface-name ui_file.ui -->
+  <requires lib="gio" version="2.44"/>
+  <requires lib="gtk" version="4.12"/>
+  <template class="window" parent="GtkApplicationWindow">
+    <child>
+      <object class="GtkButton">
+        <property name="label">Gtk.Filedialogの呼び出し</property>
+        <property name="margin-bottom">20</property>
+        <property name="margin-end">20</property>
+        <property name="margin-start">20</property>
+        <property name="margin-top">20</property>
+        <signal name="clicked" handler="on_button_clicked"/>
+      </object>
+    </child>
+  </template>
+  <object class="GtkFileDialog" id="filedialog">
+    <property name="accept-label">選択</property>
+    <property name="default-filter">filter1</property>
+    <property name="filters">
+      <object class="GListStore">
+        <child>
+          <object class="GtkFileFilter" id="filter1">
+            <property name="name">プレーンテキスト</property>
+            <property name="patterns">*.text
+*.txt</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkFileFilter" id="filter2">
+            <property name="name">htmlファイル</property>
+            <property name="suffixes">html</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkFileFilter" id="filter3">
+            <property name="mime-types">text/xml</property>
+            <property name="name">xmlファイル</property>
+          </object>
+        </child>
+      </object>
+    </property>
+    <property name="title">読み込むファイルの選択</property>
+  </object>
+</interface>
