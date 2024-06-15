@@ -45,6 +45,6 @@
         </child>
       </object>
     </property>
-    <property name="title">読み込むファイルの選択</property>
+    <property name="title">保存ファイルの選択</property>
   </object>
 </interface>

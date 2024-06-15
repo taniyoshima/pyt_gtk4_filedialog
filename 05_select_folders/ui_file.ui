@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.90.2 -->
+<interface>
+  <!-- interface-name ui_file.ui -->
+  <requires lib="gtk" version="4.12"/>
+  <template class="window" parent="GtkApplicationWindow">
+    <property name="default-height">60</property>
+    <property name="default-width">400</property>
+    <property name="title">pyt_gtk4_filedialog5</property>
+    <child>
+      <object class="GtkButton">
+        <property name="label">Gtk.Filedialogの呼び出し</property>
+        <property name="margin-bottom">20</property>
+        <property name="margin-end">20</property>
+        <property name="margin-start">20</property>
+        <property name="margin-top">20</property>
+        <signal name="clicked" handler="on_button_clicked"/>
+      </object>
+    </child>
+  </template>
+  <object class="GtkFileDialog" id="filedialog">
+    <property name="accept-label">選択</property>
+    <property name="title">複数フォルダの選択</property>
+  </object>
+</interface>

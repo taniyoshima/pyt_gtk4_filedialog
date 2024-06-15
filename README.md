@@ -4,6 +4,10 @@
 
 ## 内容 
 
+Gtk.FileDialogを使用するプログラム
+
+<br>
+
 ### [01_open_file](./01_open_file/README.md)
 
 Gtk.FileDialogでファイルを選択して開くプログラム  
@@ -15,6 +19,14 @@ Gtk.FileDialogで複数のファイルを選択して開くプログラム
 ### [03_save_file](./03_save_file/README.md)
 
 Gtk.FileDialogで保存するファイルを選択するプログラム  
+
+### [04_select_folder](./04_select_folder/README.md)
+
+Gtk.FileDialogでフォルダを選択するプログラム  
+
+### [05_select_folders](./05_select_folders/README.md)
+
+Gtk.FileDialogで複数のフォルダを選択するプログラム  
 
 <br>
 
@@ -31,6 +43,12 @@ Gtk.FileDialogで保存するファイルを選択するプログラム
 | mordal | ファイル選択ダイアログがモーダルかどうか。 |
 | title | ファイル選択ダイアログに表示されるタイトル。 |
 
+
+<br>
+
+## 履歴
+
+2024/6/16 サンプルプログラム（01〜05）の追加
 
 <br>
 

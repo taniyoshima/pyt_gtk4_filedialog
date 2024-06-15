@@ -4,7 +4,7 @@ gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, GLib, Gio
 
 
-APPID = 'com.github.taniyoshima.pyt_gtk4_filedialog2'
+APPID = 'com.github.taniyoshima.pyt_gtk4_filedialog4'
 
 
 @Gtk.Template(filename=os.path.dirname(__file__) + '/ui_file.ui')
@@ -22,21 +22,18 @@ class Gtk4TestTest(Gtk.ApplicationWindow):
     @Gtk.Template.Callback()
     def on_button_clicked(self, button):
 
-        self.filedialog.open_multiple(
+        self.filedialog.select_multiple_folders(
             parent=self, cancellable=None,
-            callback=self.on_filedialog_open_multiple)
+            callback=self.on_filedialog_select_multiple_folders)
 
-    def on_filedialog_open_multiple(self, filedialog, task):
+    def on_filedialog_select_multiple_folders(self, filedialog, task):
         try:
-            files = filedialog.open_multiple_finish(task)
+            folders = filedialog.select_multiple_folders_finish(task)
         except GLib.GError:
             return
 
-        if files is not None:
-            for file in files:
-                print(file.get_path())
-                print(file.get_parent().get_path())
-                print(file.get_basename())
+        for folder in folders:
+            print(folder.get_path())
 
 
 class Gtk4TestApp(Gtk.Application):

@@ -4,7 +4,7 @@ gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk, GLib, Gio
 
 
-APPID = 'com.github.taniyoshima.pyt_gtk4_filedialog2'
+APPID = 'com.github.taniyoshima.pyt_gtk4_filedialog3'
 
 
 @Gtk.Template(filename=os.path.dirname(__file__) + '/ui_file.ui')
